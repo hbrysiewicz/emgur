@@ -1,7 +1,4 @@
 {{#each}}
-  <div class='image-item'>
-    <div class='img-thumb'>
-      <img {{bind-attr src=image.url}}>
-    </div>
-  </div>
+  {{image-thumb content=this}}
 {{/each}}
+<div class='clear'></div>

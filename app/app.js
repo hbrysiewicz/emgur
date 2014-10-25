@@ -65,7 +65,7 @@ var COMMENTS = {
     posted: 1414192068670,
     content: "I have a friend who started an animal rescue. Thought about doing a post for her and her organization. Anyone interested?"
   }
-}
+};
 
 var server = new Pretender(function() {
   this.maxImageId = 3;
