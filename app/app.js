@@ -29,6 +29,10 @@ var IMAGES = {
   '3': {
     id: 3,
     url: 'http://i.imgur.com/sVRsGmH.jpg'
+  },
+  '4': {
+    id: 4,
+    url: 'http://i.imgur.com/X2xGlUQ.gif'
   }
 };
 
@@ -56,6 +60,14 @@ var GALLERIES = {
     updated: 1414192068670,
     comments: [],
     image: 3
+  },
+  '4': {
+    id: 4,
+    title: 'MRW I get downvoted to oblivion',
+    posted: 1415174400000,
+    updated: 1415174400000,
+    comments: [],
+    image: 4
   }
 };
 

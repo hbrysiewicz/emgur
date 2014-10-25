@@ -1,23 +1,27 @@
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 html, body {
   margin: 0px;
 }
 
 body {
+  font-family: 'Arial', sans-serif;
   background: url('http://s.imgur.com/images/main-bg.png') top center no-repeat;
   background-color: #121211;
   color: #fff;
 }
 
 header {
+  font-size: 36px;
+  font-weight: 800;
+  padding-left: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   background-color: #2b2b38;
   width: 100%;
   -webkit-box-shadow: rgb(17, 17, 17) 0px 0px 11px 1px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .clear {
@@ -42,9 +46,15 @@ header {
   margin-right: 4px;
   padding-right:2px;
   padding-bottom: 2px;
-  border: 2px solid #ddddd1;
+  border: 4px solid #ddddd1;
 }
 
 .image-item:hover {
-  border: 2px solid #FF6B6B;
+  border: 4px solid #FF6B6B;
+}
+
+.image-thumb img {
+  position: absolute;
+  clip: rect(-20px 180px 180px 0px);
+  height: 250px;
 }
