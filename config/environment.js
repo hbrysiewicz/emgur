@@ -25,6 +25,14 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    // ember-cli-content-security-policy to configure CSP for
+    // work in development
+    // https://github.com/rwjblue/ember-cli-content-security-policy
+    ENV.contentSecurityPolicy = {
+      'script-src': "'self' 'unsafe-eval'",
+      'img-src': "'self' http://i.imgur.com http://s.imgur.com"
+    };
   }
 
   if (environment === 'test') {
