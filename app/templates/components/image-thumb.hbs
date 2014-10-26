@@ -3,8 +3,12 @@
     <div class='image-thumb'>
       <img {{bind-attr src=content.image.url}}>
     </div>
-    <div class='image-details'>
-      <div class='image-comments'>{{commentsCount}}</div>
-    </div>
+    {{#if isHovering}}
+      <div class='image-details'>
+        <div class='image-comment'>
+          <div class='comment-count'>{{commentsCount}} comments</div>
+        </div>
+      </div>
+    {{/if}}
   </div>
 {{/link-to}}

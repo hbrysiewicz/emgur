@@ -113,8 +113,21 @@ var server = new Pretender(function() {
 
   // Find specific gallery item
   this.get('/galleries/:id', function(request) {
-    var gallery = JSON.stringify({ "gallery": GALLERIES[request.params.id] });
-    return [200, {"Content-Type": "application/json"}, gallery];
+    var gallery = GALLERIES[request.params.id];
+    var images = Object.keys(IMAGES).map(function(k) {
+      return IMAGES[k];
+    });
+    var comments = Object.keys(COMMENTS).map(function(k) {
+      return COMMENTS[k];
+    });
+
+    var jsonStr = JSON.stringify({
+      gallery: gallery,
+      images: images,
+      comments: comments
+    });
+
+    return [200, {"Content-Type": "application/json"}, jsonStr];
   });
 
   // Create a gallery item
