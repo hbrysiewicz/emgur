@@ -2,6 +2,12 @@ html, body {
   margin: 0px;
 }
 
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background: url('http://s.imgur.com/images/main-bg.png') top center no-repeat;
@@ -13,12 +19,26 @@ header {
   font-size: 36px;
   font-weight: 800;
   padding-left: 20px;
+  margin-bottom: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-bottom: 20px;
-  background-color: #2b2b38;
+  background-color: #2b2b2b;
   width: 100%;
+  height: 67px;
   -webkit-box-shadow: rgb(17, 17, 17) 0px 0px 11px 1px;
+}
+
+header .fa-circle {
+  color: rgb(242, 56, 24);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+header a {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  padding: 8px;
 }
 
 a {
@@ -27,19 +47,23 @@ a {
   font-weight: 400;
 }
 
+header a:hover {
+  background-color: #444442;
+}
+
 .clear {
   clear: both;
 }
 
 .main-container {
-  width: 90%;
+  width: 1000px;
   margin: auto;
 }
 
 .container {
   -webkit-box-shadow: rgb(17, 17, 17) 0px 0px 11px 1px;
   background-color: #2b2b2b;
-  padding: 20px;
+  padding: 18px;
   border-radius: 10px;
 }
 
@@ -50,17 +74,21 @@ a {
   width: 180px;
   margin-left: 4px;
   margin-right: 4px;
-  border: 4px solid #ddddd1;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: 3px solid #ddddd1;
+  overflow: hidden;
 }
 
 .image-item:hover {
-  border: 4px solid #FF6B6B;
+  border: 3px solid #FF6B6B;
 }
 
 .image-thumb img {
   position: absolute;
-  clip: rect(-20px 180px 180px 0px);
+  /*clip: rect(-40px 180px 180px -20px);*/
   height: 250px;
+  margin: auto;
 }
 
 .image-details {
@@ -90,7 +118,7 @@ a {
   float: left;
   -webkit-box-shadow: rgb(17, 17, 17) 0px 0px 11px 1px;
   background-color: #2b2b2b;
-  padding: 20px;
+  padding: 18px;
   border-radius: 10px;
 }
 
@@ -105,7 +133,7 @@ a {
 }
 
 .gallery-full {
-  width: 98%;
+  width: 670px;
   margin: auto;
 }
 
@@ -124,6 +152,7 @@ a {
   font-size: 18px;
 }
 
+.gallery-image,
 .gallery-image img {
-  width: 100%;
+  width: 634px;
 }

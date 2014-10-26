@@ -33,6 +33,18 @@ var IMAGES = {
   '4': {
     id: 4,
     url: 'http://i.imgur.com/X2xGlUQ.gif'
+  },
+  '5': {
+    id: 5,
+    url: 'http://i.imgur.com/5aXac9q.gif?1'
+  },
+  '6': {
+    id: 6,
+    url: 'http://i.imgur.com/Mnsld14.jpg'
+  },
+  '7': {
+    id: 7,
+    url: 'http://i.imgur.com/e8q8MJY.jpg'
   }
 };
 
@@ -68,6 +80,30 @@ var GALLERIES = {
     updated: 1415174400000,
     comments: [],
     image: 4
+  },
+  '5': {
+    id: 5,
+    title: 'BMO Battery Switch',
+    posted: 1414359113315,
+    updated: 1414359113315,
+    comments: [2,3],
+    image: 5
+  },
+  '6': {
+    id: 6,
+    title: "That moment when you just give up and don't care anymore",
+    posted: 1414192068670,
+    updated: 1414192068670,
+    comments: [4],
+    image: 6
+  },
+  '7': {
+    id: 7,
+    title: 'Started fostering kittens yesterday, this guy tuckered himself out playing with his siblings',
+    posted: 1401492647008,
+    updated: 1401492647008,
+    comments: [],
+    image: 7
   }
 };
 
@@ -76,6 +112,21 @@ var COMMENTS = {
     id: 1,
     posted: 1414192068670,
     content: "I have a friend who started an animal rescue. Thought about doing a post for her and her organization. Anyone interested?"
+  },
+  '2': {
+    id: 2,
+    posted: 1414359113315,
+    content: 'I down voted because repost, then upvoted because you got me.'
+  },
+  '3': {
+    id: 3,
+    posted: 1414192068670,
+    content: "EVEN REFRESHING DOESN'T HELP"
+  },
+  '4': {
+    id: 4,
+    posted: 1414192068670,
+    content: 'FLY YOU FOWL, FLY!'
   }
 };
 
