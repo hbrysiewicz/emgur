@@ -19,4 +19,10 @@ var app = new EmberApp();
 
 app.import('bower_components/fontawesome/css/font-awesome.css');
 
-module.exports = app.toTree();
+var pickFiles = require('broccoli-static-compiler');
+var fontawesomeFonts = pickFiles('bower_components/fontawesome/fonts', {
+  srcDir: '/',
+  destDir: '/fonts'
+});
+
+module.exports = app.toTree(fontawesomeFonts);
