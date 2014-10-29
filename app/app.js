@@ -130,10 +130,12 @@ var COMMENTS = {
   }
 };
 
+// TODO move server into own file
+// TODO cleanup endpoint code
 var server = new Pretender(function() {
-  this.maxImageId = 3;
-  this.maxGalleryId = 3;
-  this.maxCommentId = 1;
+  var maxImageId = 7;
+  var maxGalleryId = 7;
+  var maxCommentId = 4;
 
   this.getAll = function() {
     var galleries = Object.keys(GALLERIES).map(function(k) {
@@ -183,10 +185,22 @@ var server = new Pretender(function() {
 
   // Create a gallery item
   this.post('/galleries', function(request) {
-    var gallery = JSON.parse(request.requestBody);
-    gallery.id = ++this.maxGalleryId;
+    var gallery = JSON.parse(request.requestBody).gallery;
+    gallery.id = ++maxGalleryId;
+    gallery.posted = Date.now();
     GALLERIES[gallery.id] = gallery;
-    return [200, {"Content-Type": "application/json"}, gallery];
+    var json = JSON.stringify({ gallery: gallery });
+    return [200, {"Content-Type": "application/json"}, json];
+  });
+
+  // Update a gallery item
+  this.put('/galleries/:id', function(request) {
+    var gallery = JSON.parse(request.requestBody).gallery;
+    gallery.id = request.params.id;
+    gallery.updated = Date.now();
+    GALLERIES[gallery.id] = gallery;
+    var json = JSON.stringify({ gallery: gallery });
+    return [200, {"Content-Type": "application/json"}, json];
   });
 
   // Find specific image item
@@ -195,12 +209,13 @@ var server = new Pretender(function() {
     return [200, {"Content-Type": "application/json"}, image];
   });
 
-  // Create a image item
+  // Create an image item
   this.post('/images', function(request) {
     var image = JSON.parse(request.requestBody);
-    image.id = ++this.maxImageId;
+    image.id = ++maxImageId;
     IMAGES[image.id] = image;
-    return [200, {"Content-Type": "application/json"}, image];
+    var json = JSON.stringify({ image: image });
+    return [200, {"Content-Type": "application/json"}, json];
   });
 
   // Find specific comment item
@@ -209,12 +224,14 @@ var server = new Pretender(function() {
     return [200, {"Content-Type": "application/json"}, comment];
   });
 
-  // Create an comment item
+  // Create a comment item
   this.post('/comments', function(request) {
-    var comment = JSON.parse(request.requestBody);
-    comment.id = ++this.maxCommentId;
+    var comment = JSON.parse(request.requestBody).comment;
+    comment.id = ++maxCommentId;
+    comment.posted = Date.now();
     COMMENTS[comment.id] = comment;
-    return [200, {"Content-Type": "application/json"}, comment];
+    var json = JSON.stringify({ comment: comment });
+    return [200, {"Content-Type": "application/json"}, json];
   });
 });
 

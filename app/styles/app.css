@@ -144,13 +144,12 @@ header a:hover {
   line-height: 36px;
   text-shadow: 1px 1px 1px #222;
   margin-top: -10px;
-  margin-bottom: 8px;
 }
 
 .gallery-posted {
   color: #999;
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .gallery-image,
@@ -218,4 +217,25 @@ header a:hover {
   color: #888;
   font-size: 20px;
   font-weight: 800;
+}
+
+.gallery-comments-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-comment {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ddddd1;
+  background-color: #181817;
+  border-radius: 4px;
+  line-height: 16px;
+  min-height: 32px;
+  padding: 10px;
+}
+
+.comment-posted {
+  font-size: 10px;
 }

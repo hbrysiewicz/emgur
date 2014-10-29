@@ -10,7 +10,7 @@
   <div class='gallery-comments'>
     <div class='comment-new'>
       {{#if isEditing}}
-        {{focus-textarea value=newComment rows=3 focus-out='offEdit'}}
+        {{focus-textarea value=newComment rows=3 focus-out='offEdit' action='submitComment'}}
         <div class='comment-button-container'>
           <div class='save-button' {{action 'submitComment'}}>save</div>
           <div class='comment-length'>{{newCommentCharacters}}</div>
