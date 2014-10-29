@@ -6,9 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('gallery', { path: '/gallery/:gallery_id' }, function() {
-    this.route('comment', { path: '/comment/:comment_id' });
-  });
+  this.route('gallery', { path: '/gallery/:gallery_id' });
 });
 
 export default Router;
