@@ -8,6 +8,25 @@
   </div>
 
   <div class='gallery-comments'>
+    <div class='comment-new'>
+      {{#if isEditing}}
+        {{focus-textarea value=newComment rows=3 focus-out='offEdit'}}
+        <div class='comment-button-container'>
+          <button {{action 'submitComment'}}>save</button>
+          <div class='comment-length'>{{newCommentLength}}</div>
+        </div>
+      {{else}}
+        {{input placeholder='Submit a comment' focus-in='onEdit'}}
+      {{/if}}
+    </div>
+    <ul class='gallery-comments-ul'>
+      {{#each comments}}
+        <li class='gallery-comment'>
+          <div class='comment-posted'>{{postedFormatted}}</div>
+          <div class='comment-content'>{{content}}</div>
+        </li>
+      {{/each}}
   </div>
 </div>
+
 <div class='gallery-navigation'></div>

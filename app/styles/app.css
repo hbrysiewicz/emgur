@@ -157,3 +157,23 @@ header a:hover {
 .gallery-image img {
   width: 634px;
 }
+
+.comment-new {
+  margin-top: 8px;
+}
+
+.comment-new textarea {
+  height: 60px;
+  width: 514px;
+}
+
+.comment-new input {
+  background-color: #121211;
+  width: 634px;
+  margin: auto;
+  color: #888;
+  padding: 5px 7px 5px 4px;
+  font-size: 16px;
+  border: 1px solid #444442;
+}
+
