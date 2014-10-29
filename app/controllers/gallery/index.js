@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
+  maxChars: 140,
   isEditing: false,
   newComment: null,
 
-  newCommentLength: function() {
-    return this.get('newComment.length') || 0;
+  newCommentCharacters: function() {
+    return this.maxChars - this.get('newComment.length');
   }.property('newComment'),
 
   actions: {
@@ -14,7 +15,7 @@ export default Ember.ObjectController.extend({
     },
 
     offEdit: function() {
-      if (this.get('newCommentLength') === 0)
+      if (this.get('newCommentCharacters') === this.maxChars)
         this.set('isEditing', false);
     }
   }

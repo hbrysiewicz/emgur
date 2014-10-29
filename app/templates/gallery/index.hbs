@@ -12,9 +12,10 @@
       {{#if isEditing}}
         {{focus-textarea value=newComment rows=3 focus-out='offEdit'}}
         <div class='comment-button-container'>
-          <button {{action 'submitComment'}}>save</button>
-          <div class='comment-length'>{{newCommentLength}}</div>
+          <div class='save-button' {{action 'submitComment'}}>save</div>
+          <div class='comment-length'>{{newCommentCharacters}}</div>
         </div>
+        <div class='clear'></div>
       {{else}}
         {{input placeholder='Submit a comment' focus-in='onEdit'}}
       {{/if}}

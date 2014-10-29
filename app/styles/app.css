@@ -163,8 +163,21 @@ header a:hover {
 }
 
 .comment-new textarea {
-  height: 60px;
-  width: 514px;
+  height: 70px;
+  width: 534px;
+  color: #fff;
+  font-size: 16px;
+  float: left;
+  background-color: #121211;
+  border: 1px solid #444442;
+  resize: none;
+}
+
+.comment-new textarea:focus {
+  background-color: #262E3B;
+  border-color: #C29F37;
+  box-shadow: 0 0 3px 0 #C29F37;
+  outline: 0 none;
 }
 
 .comment-new input {
@@ -177,3 +190,32 @@ header a:hover {
   border: 1px solid #444442;
 }
 
+.comment-button-container {
+  float: left;
+  margin-left: 5px;
+}
+
+.save-button {
+  cursor: pointer;
+  background: linear-gradient(to bottom,rgba(35,35,35,1) 0,rgba(18,18,17,1) 100%);
+  line-height: 35px;
+  border-radius: 4px;
+  width: 95px;
+  height: 40px;
+  border: 2px solid #444442;
+  text-align: center;
+  font-size: 18px;
+  color: #ddddd1;
+}
+
+.save-button:hover {
+  border: 2px solid #444442;
+  background: linear-gradient(to bottom,rgba(48,48,48,1) 0,rgba(18,18,17,1) 100%)
+}
+
+.comment-length {
+  margin: 5px 0 0 5px;
+  color: #888;
+  font-size: 20px;
+  font-weight: 800;
+}
